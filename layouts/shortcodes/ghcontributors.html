@@ -24,14 +24,10 @@
     {{ errorf "The %q shortcode requires one positional argument (GitHub API URL). See %s" .Name .Position }}
   {{ end }}
   {{ $contributors := slice }}
-  {{ with try (resources.GetRemote $url) }}
-    {{ with .Err }}
-      {{ errorf "%s" . }}
-    {{ else with .Value }}
-      {{ $contributors = .Content | transform.Unmarshal }}
-    {{ else }}
-      {{ errorf "Unable to get remote resource %q" $url }}
-    {{ end }}
+  {{ with resources.GetRemote $url }}
+    {{ $contributors = .Content | transform.Unmarshal }}
+  {{ else }}
+    {{ errorf "Unable to get remote resource %q" $url }}
   {{ end }}
   {{ range $contributors }}
   <div>
