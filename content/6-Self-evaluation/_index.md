@@ -5,7 +5,7 @@ weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
-The internship period from **June 22, 2026** to **August 14, 2026** at **AWS Vietnam** (*First Cloud AI Journey* program) was an incredibly valuable time for me. This was not only an opportunity to put classroom theories into practice but also a chance for me to self-assess my capabilities, identify my strengths, as well as the gaps that need to be filled.
+The internship period from **June 22, 2026** to **August 15, 2026** at **AWS Vietnam** (*First Cloud AI Journey* program) was an incredibly valuable time for me. This was not only an opportunity to put classroom theories into practice but also a chance for me to self-assess my capabilities, identify my strengths, as well as the gaps that need to be filled.
 
 By directly participating in building assignments, working in teams, and getting hands-on with tools on the Cloud & AI platforms, I have accumulated a lot of practical experience. Looking back on the recent journey, I have summarized and evaluated my training process across the following aspects:
 

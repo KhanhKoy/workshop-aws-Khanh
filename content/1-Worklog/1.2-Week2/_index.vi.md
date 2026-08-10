@@ -7,43 +7,22 @@ pre: " <b> 1.2. </b> "
 ---
 ### Mục tiêu tuần 2:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện pipeline xử lý dữ liệu pháp luật và tối ưu quá trình build index
+* Tìm hiểu RDS PostgreSQL pgvector, Bedrock Titan Embedding và viết proposal cho dự ánHiểu dịch vụ AWS cơ bản, cách dùng console & CL
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
-| 2    | - Làm quen với các thành viên FCAJ - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                         | 29/06/2026       | 29/06/2026         |                                                                                   |
-| 3    | - Tìm hiểu AWS và các loại dịch vụ&emsp; + Compute &emsp; + Storage &emsp; + Networking &emsp; + Database &emsp; + ...                                                           | 30/06/2026       | 30/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4    | - Tạo AWS Free Tier account - Tìm hiểu AWS Console & AWS CLI  -**Thực hành:** &emsp; + Tạo AWS account &emsp; + Cài AWS CLI & cấu hình  &emsp; + Cách sử dụng AWS CLI | 01/07/2026       | 01/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | - Tìm hiểu EC2 cơ bản:&emsp; + Instance types &emsp; + AMI &emsp; + EBS &emsp; + ...  - Các cách remote SSH vào EC2  - Tìm hiểu Elastic IP                                     | 02/07/2026       | 02/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6    | -**Thực hành:** &emsp; + Tạo EC2 instance &emsp; + Kết nối SSH &emsp; + Gắn EBS volume                                                                                      | 03/07/2026       | 03/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Thứ | Công việc                                                                                                                                                                                                                       | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
+| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
+| 2    | - Tiếp tục hoàn thiện pipeline xử lý dữ liệu pháp luật.<br />- Cải tiến đọc dữ liệu theo streaming/batch để giảm sử dụng RAM.<br />- Tối ưu cách đọc metadata và content parquet theo lô nhỏ.       | 29/06/2026       | 29/06/2026         |                                                                                   |
+| 3    | - Tối ưu quá trình build index.<br />- Bổ sung cơ chế commit định kỳ để tránh tràn bộ nhớ.<br />- Kiểm tra và xử lý các vấn đề phát sinh khi build dữ liệu lớn.                                    | 30/06/2026       | 30/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4    | - Hoàn thiện logic chunking cho văn bản pháp luật.<br />- Điều chỉnh chunk size, chunk overlap và metadata.<br />- Hoàn thiện EmbeddingService với model embedding tiếng Việt.                                  | 01/07/2026       | 01/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5    | - Xây dựng pipeline build index từ document, chunk, embedding đến vector store.<br />- Viết script scripts/build_index.py để tạo vector index.<br />- Chạy thử và kiểm tra kết quả build index.                 | 02/07/2026       | 02/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6    | - Tìm hiểu Amazon RDS PostgreSQL và extension pgvector.<br />- Tìm hiểu Amazon Bedrock Titan Embedding.<br />- Thực hiện viết proposal để trình bày ý tưởng dự án.<br />- Thực hiện viết worklog tuần 2. | 03/07/2026       | 03/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Pipeline build index được hoàn thiện hơn và có khả năng xử lý dữ liệu theo batch.
+- Cải thiện khả năng kiểm soát bộ nhớ khi xử lý dữ liệu lớn.
+- Hoàn thiện proposal trình bày ý tưởng và định hướng của dự án.
+- Nắm được vai trò của RDS pgvector và Bedrock Titan Embedding trong kiến trúc cloud.

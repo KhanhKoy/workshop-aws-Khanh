@@ -44,11 +44,13 @@ Giải pháp TAKC được triển khai hoàn toàn trên hạ tầng đám mây
 * **Thực thi nén bằng LLM:** Hệ thống sử dụng các foundation model hiệu năng cao trên **Amazon Bedrock** (như Anthropic Claude) hoặc mô hình tùy chỉnh trên **Amazon SageMaker** để thực hiện nén tài liệu theo từng tác vụ.
 * L**ưu trữ tri thức đã nén:** Các bản nén thu được lưu vào cơ sở dữ liệu vector/văn bản (như **Amazon OpenSearch Service**) để sẵn sàng cho bước truy vấn.
 
-2. Query Pipeline (Pipeline xử lý truy vấn thời gian thực)
+2. **Query Pipeline (Pipeline xử lý truy vấn thời gian thực)**
 
-* Phân tích độ phức tạp (Complexity Analyzer): Khi người dùng gửi câu hỏi, hệ thống tự động xác định loại tác vụ và mức độ chi tiết cần thiết.
-* Truy xuất tri thức đã nén (Compressed Knowledge Retrieval): Thay vì truy xuất từng đoạn văn bản nhỏ, hệ thống lấy ra toàn bộ bản biểu diễn tri thức đã nén tương ứng với tác vụ đó.
-* Sinh câu trả lời (Inference): LLM trên Amazon Bedrock tiếp nhận bản tri thức cô đọng và tạo ra câu trả lời chính xác, logic với chi phí token tối ưu nhất.
+* **Phân tích độ phức tạp (Complexity Analyzer):** Khi người dùng gửi câu hỏi, hệ thống tự động xác định loại tác vụ và mức độ chi tiết cần thiết.
+* **Truy xuất tri thức đã nén (Compressed Knowledge Retrieval):** Thay vì truy xuất từng đoạn văn bản nhỏ, hệ thống lấy ra toàn bộ bản biểu diễn tri thức đã nén tương ứng với tác vụ đó.
+* **Sinh câu trả lời (Inference):** LLM trên Amazon Bedrock tiếp nhận bản tri thức cô đọng và tạo ra câu trả lời chính xác, logic với chi phí token tối ưu nhất.
+
+![1786352375132](image/_index.vi/1786352375132.png)
 
 ## Đặc điểm triển khai và Vận hành
 

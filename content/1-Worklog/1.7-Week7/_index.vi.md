@@ -7,43 +7,23 @@ pre: " <b> 1.7. </b> "
 ---
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tích hợp giao diện Streamlit, FastAPI backend và các API quản trị
+- Bổ sung xác thực, phân quyền, upload tài liệu và hạ tầng nền bằng AWS services
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
-| 2    | - Làm quen với các thành viên FCAJ - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                         | 03/08/2026       | 03/08/2026         |                                                                                   |
-| 3    | - Tìm hiểu AWS và các loại dịch vụ&emsp; + Compute &emsp; + Storage &emsp; + Networking &emsp; + Database &emsp; + ...                                                           | 04/08/2026       | 04/08/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4    | - Tạo AWS Free Tier account - Tìm hiểu AWS Console & AWS CLI  -**Thực hành:** &emsp; + Tạo AWS account &emsp; + Cài AWS CLI & cấu hình  &emsp; + Cách sử dụng AWS CLI | 05/08/2026       | 05/08/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | - Tìm hiểu EC2 cơ bản:&emsp; + Instance types &emsp; + AMI &emsp; + EBS &emsp; + ...  - Các cách remote SSH vào EC2  - Tìm hiểu Elastic IP                                     | 06/08/2026       | 06/08/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6    | -**Thực hành:** &emsp; + Tạo EC2 instance &emsp; + Kết nối SSH &emsp; + Gắn EBS volume                                                                                      | 07/08/2026       | 07/08/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Thứ | Công việc                                                                                                                                                                                                                                                                                                                                                                                                                                 | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
+| 2    | - Tích hợp giao diện Streamlit với core RAG.<br />- Chỉnh sửa UI, database và luồng hỏi đáp.<br />- Kiểm tra chatbot hoạt động trên giao diện Streamlit.                                                                                                                                                                                                                                                                | 03/08/2026       | 03/08/2026         |                                                                                   |
+| 3    | - Bổ sung FastAPI backend cho các API chat, conversation và admin.<br />- Tìm hiểu và tích hợp Amazon Cognito cho xác thực người dùng.<br />- Xây dựng Cognito JWT verification trong FastAPI.                                                                                                                                                                                                                            | 04/08/2026       | 04/08/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4    | - Thiết kế phân quyền RBAC theo nhóm users, editors và admins.<br />- Viết Cognito admin service để quản lý user và group.<br />- Kiểm thử chức năng list, enable, disable user và add user to group.                                                                                                                                                                                                                   | 05/08/2026       | 05/08/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5    | - Viết DynamoDB chat repository để lưu conversation metadata và message.<br />- Xây dựng API admin tạo presigned S3 upload.<br />- Tạo S3 manifest chứa metadata, document_id, actor và object_key cho ingestion.                                                                                                                                                                                                             | 06/08/2026       | 06/08/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6    | - Viết Lambda handler nhận sự kiện S3 hoặc SQS để xử lý tài liệu mới.<br />- Bổ sung cơ chế partial batch failure, retry và DLQ cho Lambda/SQS.<br />- Tạo CloudFormation template cho Cognito, DynamoDB, S3, SQS và DLQ.<br />- Viết bài blog 2.<br />- Viết báo cáo event "AWS FCAJ Agent Forge - Deepdive Ngày 1".<br />- Tiếp tục cập nhật phần workshop.<br />- Thực hiện viết worklog tuần 7. | 07/08/2026       | 07/08/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Giao diện Streamlit được tích hợp với core RAG
+- FastAPI backend có thêm các API phục vụ chat, conversation và admin
+- Bổ sung xác thực Cognito và phân quyền theo nhóm người dùng
+- Có CloudFormation template cho các tài nguyên nền Cognito, DynamoDB, S3, SQS và DLQ
+- Hoàn thành bài blog 2, báo cáo event và worklog tuần 7.

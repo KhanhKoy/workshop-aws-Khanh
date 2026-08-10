@@ -7,7 +7,7 @@ pre: " <b> 3.1. </b> "
 ---
 # OPTIMIZING ENTERPRISE AI ON AWS: A MAJOR LEAP FROM RAG TO TASK-AWARE KNOWLEDGE COMPRESSION
 
-Retrieval-Augmented Generation (RAG) has become a popular standard that helps enterprise AI systems retrieve knowledge and mitigate hallucinations^^. However, when applied to complex analytical tasks spanning hundreds of documents—such as corporate financial due diligence or regulatory compliance reviews—RAG begins to reveal its inherent limitations. Similarity search only extracts fragmented text segments, losing the continuous connectivity across documents.
+Retrieval-Augmented Generation (RAG) has become a popular standard that helps enterprise AI systems retrieve knowledge and mitigate hallucinations. However, when applied to complex analytical tasks spanning hundreds of documents—such as corporate financial due diligence or regulatory compliance reviews—RAG begins to reveal its inherent limitations. Similarity search only extracts fragmented text segments, losing the continuous connectivity across documents.
 
 To completely address this barrier, the **Task-Aware Knowledge Compression** (TAKC) solution was introduced. This technique allows compressing the entire knowledge base into task-specific representations, helping optimize context window capacity, significantly reduce token costs, and enhance accuracy for enterprise AI on AWS infrastructure.
 
@@ -49,6 +49,8 @@ The TAKC solution is fully deployed on AWS cloud infrastructure, combining leadi
 * **Complexity Analyzer:** When a user submits a question, the system automatically determines the task type and required level of detail.
 * **Compressed Knowledge Retrieval:** Instead of retrieving individual small text chunks, the system fetches the entire compressed knowledge representation corresponding to that task.
 * **Inference:** The LLM on Amazon Bedrock receives the condensed knowledge representation and generates an accurate, logical answer with optimal token costs.
+
+![1786352411279](image/_index/1786352411279.png)
 
 ## Deployment and Operational Features
 

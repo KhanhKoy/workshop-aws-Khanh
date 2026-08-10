@@ -5,49 +5,24 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Chuyển vector store sang Amazon RDS PostgreSQL pgvector
+- Tối ưu truy vấn vector search và bắt đầu đo hiệu năng hệ thống
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
-| 2    | - Làm quen với các thành viên FCAJ - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                         | 20/07/2026       | 20/07/2026         |                                                                                   |
-| 3    | - Tìm hiểu AWS và các loại dịch vụ&emsp; + Compute &emsp; + Storage &emsp; + Networking &emsp; + Database &emsp; + ...                                                           | 21/07/2026       | 21/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4    | - Tạo AWS Free Tier account - Tìm hiểu AWS Console & AWS CLI  -**Thực hành:** &emsp; + Tạo AWS account &emsp; + Cài AWS CLI & cấu hình  &emsp; + Cách sử dụng AWS CLI | 22/07/2026       | 22/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | - Tìm hiểu EC2 cơ bản:&emsp; + Instance types &emsp; + AMI &emsp; + EBS &emsp; + ...  - Các cách remote SSH vào EC2  - Tìm hiểu Elastic IP                                     | 23/07/2026       | 23/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6    | -**Thực hành:** &emsp; + Tạo EC2 instance &emsp; + Kết nối SSH &emsp; + Gắn EBS volume                                                                                      | 24/07/2026       | 24/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Thứ | Công việc                                                                                                                                                                                                                                                              | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
+| 2    | - Chuyển hướng vector store từ local sang Amazon RDS PostgreSQL pgvector.<br />- Cấu hình các biến môi trường kết nối RDS.<br />- Kiểm tra kết nối PostgreSQL từ ứng dụng.                                                                         | 20/07/2026       | 20/07/2026         |                                                                                   |
+| 3    | - Cập nhật VectorStore hỗ trợ FAISS/SQLite khi chạy local và PostgreSQL pgvector khi triển khai cloud.<br />- Tạo bảng legal_chunks và cột embedding dạng vector trong PostgreSQL.<br />- Kiểm tra quá trình insert chunk và embedding vào database. | 21/07/2026       | 21/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4    | - Tìm hiểu và triển khai tìm kiếm cosine similarity bằng pgvector.<br />- Tối ưu truy vấn RDS.<br />- Bổ sung timeout cho truy vấn PostgreSQL.                                                                                                            | 22/07/2026       | 22/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5    | - Tìm hiểu và thử nghiệm index HNSW/IVFFlat cho pgvector.<br />- Viết script create_hnsw_index.py và create_ivfflat_index.py.<br />- Bổ sung benchmark và đo latency cho retrieval, embedding, DB search và LLM.                                           | 23/07/2026       | 23/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6    | - Kiểm thử lại pipeline hỏi đáp sau khi kết nối RDS pgvector.<br />- Cập nhật README mô tả kiến trúc RDS/pgvector và cách chạy dự án.<br />- Tiếp tục cập nhật phần workshop.<br />- Thực hiện viết worklog tuần 5.                      | 24/07/2026       | 24/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Ứng dụng hỗ trợ lưu và tìm kiếm vector bằng PostgreSQL pgvector.
+- Cấu hình RDS được đưa vào hệ thống qua biến môi trường.
+- Có script phục vụ tạo HNSW/IVFFlat index cho pgvector.
+- Hoàn thành cập nhật worklog tuần 5.

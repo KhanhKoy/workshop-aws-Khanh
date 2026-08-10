@@ -7,43 +7,22 @@ pre: " <b> 1.4. </b> "
 ---
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Xây dựng luồng hỏi đáp RAG hoàn chỉnh cho chatbot pháp luật
+- Tích hợp giao diện Chainlit và thiết kế kiến trúc AWS ban đầu cho ứng dụng
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
-| 2    | - Làm quen với các thành viên FCAJ - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                         | 06/07/2026       | 06/07/2026         |                                                                                   |
-| 3    | - Tìm hiểu AWS và các loại dịch vụ&emsp; + Compute &emsp; + Storage &emsp; + Networking &emsp; + Database &emsp; + ...                                                           | 07/07/2026       | 07/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4    | - Tạo AWS Free Tier account - Tìm hiểu AWS Console & AWS CLI  -**Thực hành:** &emsp; + Tạo AWS account &emsp; + Cài AWS CLI & cấu hình  &emsp; + Cách sử dụng AWS CLI | 08/07/2026       | 08/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | - Tìm hiểu EC2 cơ bản:&emsp; + Instance types &emsp; + AMI &emsp; + EBS &emsp; + ...  - Các cách remote SSH vào EC2  - Tìm hiểu Elastic IP                                     | 09/07/2026       | 09/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6    | -**Thực hành:** &emsp; + Tạo EC2 instance &emsp; + Kết nối SSH &emsp; + Gắn EBS volume                                                                                      | 10/07/2026       | 10/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Thứ | Công việc                                                                                                                                                                                                                                                                          | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
+| 2    | - Xây dựng luồng hỏi đáp RAG hoàn chỉnh cho chatbot pháp luật.<br />- Hoàn thiện module retriever.py để truy xuất chunk liên quan.<br />- Kiểm tra kết quả retrieval với dữ liệu pháp luật.                                                               | 06/07/2026       | 06/07/2026         |                                                                                   |
+| 3    | - Hoàn thiện module prompt.py để tạo prompt dựa trên câu hỏi và context.<br />- Thiết kế prompt phù hợp cho chatbot pháp luật Việt Nam.<br />- Điều chỉnh cách đưa nguồn tài liệu vào câu trả lời.                                                  | 07/07/2026       | 07/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4    | - Hoàn thiện module generator.py để sinh câu trả lời từ LLM.<br />- Bổ sung khả năng chọn provider Gemini hoặc Amazon Bedrock.<br />- Tìm hiểu Amazon Bedrock Runtime cho phần LLM generation.                                                                    | 08/07/2026       | 08/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5    | - Hoàn thiện module qa_service.py để kết nối retriever, prompt và generator.<br />- Tạo giao diện chat bằng Chainlit trong app.py.<br />- Tích hợp Chainlit với RAG core.                                                                                            | 09/07/2026       | 09/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6    | - Tìm hiểu kiến trúc ứng dụng chạy trên Amazon EC2.<br />- Thiết kế sơ đồ kiến trúc AWS ban đầu với ALB, EC2, RDS pgvector và Bedrock.<br />- Cập nhật nội dung workshop theo các công việc đã thực hiện.<br />- Thực hiện viết worklog tuần 3. | 10/07/2026       | 10/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Hoàn thiện được luồng hỏi đáp RAG gồm retrieval, prompt và generation.
+- Giao diện Chainlit được tích hợp với RAG core.
+- Ứng dụng có khả năng nhận câu hỏi và trả lời dựa trên dữ liệu pháp luật.
+- Có bản thiết kế kiến trúc AWS ban đầu cho hệ thống.

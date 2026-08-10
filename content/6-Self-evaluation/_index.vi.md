@@ -5,7 +5,7 @@ weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
-Giai đoạn thực tập từ ngày **22/06/2026** đến **14/08/2026** tại **AWS Việt Nam** (chương trình  *First Cloud AI Journey* ) là khoảng thời gian vô cùng giá trị đối với em. Đây không chỉ là cơ hội để đưa các lý thuyết trên giảng đường vào thực tế mà còn là dịp để em tự kiểm chứng năng lực, nhận diện điểm mạnh cũng như các lỗ hổng cần lấp đầy.
+Giai đoạn thực tập từ ngày **22/06/2026** đến **15/08/2026** tại **AWS Việt Nam** (chương trình  *First Cloud AI Journey* ) là khoảng thời gian vô cùng giá trị đối với em. Đây không chỉ là cơ hội để đưa các lý thuyết trên giảng đường vào thực tế mà còn là dịp để em tự kiểm chứng năng lực, nhận diện điểm mạnh cũng như các lỗ hổng cần lấp đầy.
 
 Bằng việc trực tiếp tham gia xây dựng bài tập, làm việc nhóm và tiếp xúc với các công cụ trên nền tảng Cloud & AI, em đã tích lũy thêm nhiều kinh nghiệm thực chiến. Nhìn lại hành trình vừa qua, em tự đúc kết và đánh giá quá trình rèn luyện của mình theo các khía cạnh sau:
 

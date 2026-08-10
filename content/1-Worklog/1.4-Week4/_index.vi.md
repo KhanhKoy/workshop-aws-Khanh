@@ -7,43 +7,22 @@ pre: " <b> 1.3. </b> "
 ---
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Cải thiện giao diện chatbot và chuẩn bị định hướng triển khai cloud
+- Tìm hiểu Docker, EC2, ALB, VPC và các thành phần mạng cần thiết cho kiến trúc AWS
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
-| 2    | - Làm quen với các thành viên FCAJ - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                         | 13/07/2026       | 13/07/2026         |                                                                                   |
-| 3    | - Tìm hiểu AWS và các loại dịch vụ&emsp; + Compute &emsp; + Storage &emsp; + Networking &emsp; + Database &emsp; + ...                                                           | 14/07/2026       | 14/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4    | - Tạo AWS Free Tier account - Tìm hiểu AWS Console & AWS CLI  -**Thực hành:** &emsp; + Tạo AWS account &emsp; + Cài AWS CLI & cấu hình  &emsp; + Cách sử dụng AWS CLI | 15/07/2026       | 15/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | - Tìm hiểu EC2 cơ bản:&emsp; + Instance types &emsp; + AMI &emsp; + EBS &emsp; + ...  - Các cách remote SSH vào EC2  - Tìm hiểu Elastic IP                                     | 16/07/2026       | 16/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6    | -**Thực hành:** &emsp; + Tạo EC2 instance &emsp; + Kết nối SSH &emsp; + Gắn EBS volume                                                                                      | 17/07/2026       | 17/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Thứ | Công việc                                                                                                                                                                                                                                 | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
+| 2    | - Tạo và chỉnh sửa giao diện Chainlit cho chatbot.<br />- Kiểm tra luồng người dùng đặt câu hỏi và nhận câu trả lời.<br />- Chỉnh sửa các lỗi giao diện ban đầu.                                               | 13/07/2026       | 13/07/2026         |                                                                                   |
+| 3    | - Tìm hiểu triển khai ứng dụng Python/FastAPI/Chainlit bằng Docker.<br />- Tìm hiểu Amazon EC2 và mô hình chạy container trên EC2.<br />- Chuẩn bị định hướng đóng gói ứng dụng.                                 | 14/07/2026       | 14/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4    | - Tìm hiểu Application Load Balancer để định tuyến request đến ứng dụng.<br />- Tìm hiểu VPC, public subnet, private subnet và security group.<br />- Cập nhật kế hoạch kiến trúc AWS cho dự án.                   | 15/07/2026       | 15/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5    | - Tìm hiểu VPC Endpoint cho Bedrock, DynamoDB và S3.<br />- Bổ sung tài liệu mô tả các luồng chính của hệ thống.<br />- Tiếp tục chỉnh sửa code retrieval và vector store.                                            | 16/07/2026       | 16/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6    | - Review tiến độ nhóm và thống nhất kiến trúc cloud cho dự án Law-Chatbot.<br />- Tiếp tục cập nhật phần workshop, tổng hợp các bước triển khai và kiến trúc dự án.<br />- Thực hiện viết worklog tuần 4. | 17/07/2026       | 17/07/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Giao diện chatbot được chỉnh sửa và kiểm tra lại.
+- Nắm được mô hình triển khai ứng dụng bằng Docker trên EC2.
+- Hoàn thiện hơn tài liệu mô tả kiến trúc AWS của hệ thống.
+- Xác định được các thành phần mạng chính cần dùng khi triển khai cloud.

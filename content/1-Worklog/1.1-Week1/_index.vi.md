@@ -7,45 +7,23 @@ pre: " <b> 1.1. </b> "
 ---
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với môi trường làm việc và hoàn thành việc lập nhóm.
-* Nắm vững các khái niệm cơ bản về dịch vụ điện toán đám mây của AWS thông qua tài liệu.
-* Thiết lập và bảo mật tài khoản AWS (IAM User, Budget, Support).
-* Nghiên cứu và định hình ý tưởng cho dự án thực hành cuối khóa.
+- Làm quen với môi trường thực tập, nắm yêu cầu dự án Law-Chatbot
+- Cài đặt môi trường phát triển và xây dựng các module nền tảng ban đầu cho hệ thống RAG
 
 ### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Công việc                                                                                                                                                                             | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
-| 2    | - Làm quen với các thành viên FCAJ - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                         | 22/06/2026       | 22/06/2026         |                                                                                   |
-| 3    | - Tìm hiểu AWS và các loại dịch vụ&emsp; + Compute &emsp; + Storage &emsp; + Networking &emsp; + Database &emsp; + ...                                                           | 23/06/2026       | 23/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4    | - Tạo AWS Free Tier account - Tìm hiểu AWS Console & AWS CLI  -**Thực hành:** &emsp; + Tạo AWS account &emsp; + Cài AWS CLI & cấu hình  &emsp; + Cách sử dụng AWS CLI | 24/06/2026       | 24/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5    | - Tìm hiểu EC2 cơ bản:&emsp; + Instance types &emsp; + AMI &emsp; + EBS &emsp; + ...  - Các cách remote SSH vào EC2  - Tìm hiểu Elastic IP                                     | 25/06/2026       | 25/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6    | -**Thực hành:** &emsp; + Tạo EC2 instance &emsp; + Kết nối SSH &emsp; + Gắn EBS volume                                                                                      | 26/06/2026       | 26/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Thứ | Công việc                                                                                                                                                                                                                                    | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                                                                 |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------ | --------------------------------------------------------------------------------- |
+| 2    | - Làm quen với thành viên nhóm và môi trường thực tập.<br />- Đọc nội quy, quy định và yêu cầu của chương trình thực tập.<br />- Tìm hiểu định hướng project Law-Chatbot.                                       | 22/06/2026       | 22/06/2026         |                                                                                   |
+| 3    | - Tìm hiểu bài toán chatbot hỏi đáp văn bản pháp luật Việt Nam.<br />- Tìm hiểu tổng quan kiến trúc RAG.<br />- Cài đặt môi trường Python, VSCode, Git và các thư viện cần thiết.                                | 23/06/2026       | 23/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4    | - Khởi tạo cấu trúc source code cho dự án.<br />- Xây dựng module config.py để đọc cấu hình từ .env.<br />- Xây dựng module dataset_reader.py để đọc dữ liệu pháp luật.                                             | 24/06/2026       | 24/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5    | - Xây dựng module chunking.py để tách văn bản pháp luật thành các đoạn nhỏ.<br />- Xây dựng module embeddings.py để tạo vector embedding.<br />- Xây dựng module vector_store.py để lưu trữ và tìm kiếm vector. | 25/06/2026       | 25/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6    | - Tìm hiểu Amazon S3 và boto3.<br />- Viết script đồng bộ artefacts/vector store lên S3.<br />- Tìm hiểu IAM credentials/IAM Role khi ứng dụng truy cập AWS.<br />- Thực hiện viết worklog tuần 1.                         | 26/06/2026       | 26/06/2026         | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Kết quả đạt được tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
+Nắm được mục tiêu và hướng triển khai chính của dự án Law-Chatbot.
 
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Cài đặt được môi trường phát triển và khởi tạo source code ban đầu.
+- Xây dựng được các module nền tảng cho pipeline RAG.
+- Có script ban đầu phục vụ đồng bộ artefacts lên Amazon S3.
