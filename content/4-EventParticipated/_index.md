@@ -9,7 +9,7 @@ During my internship, I participated in three events. Each one was a memorable e
 
 ### [Event 1](4.1-Event1/)
 
-&emsp;**Event Name:** FCAJ - AGENTIC AI BUILD WEEK - The Largest Agentic AI Buildation In Asean
+&emsp;**Event Name:** FCAJ - AGENTIC AI BUILD WEEK
 
 &emsp;**Date & Time:** 09:00, July 25, 2026
 
@@ -21,7 +21,7 @@ During my internship, I participated in three events. Each one was a memorable e
 
 ### [Event 2](4.2-Event2/)
 
-&emsp;**Event Name:** Agent Forge - Deepdive Day 1
+&emsp;**Event Name:** AWS FCAJ Agent Forge - Deepdive Day 1
 
 &emsp;**Date & Time:** 09:00, August 01, 2026
 
@@ -31,7 +31,7 @@ During my internship, I participated in three events. Each one was a memorable e
 
 ### [Event 3](4.3-Event3/)
 
-&emsp;**Event Name:** Agent Forge - Deepdive Day 2
+&emsp;**Event Name:** AWS FCAJ Agent Forge - Deepdive Day 2
 
 &emsp;**Date & Time:** 09:00, August 08, 2026
 

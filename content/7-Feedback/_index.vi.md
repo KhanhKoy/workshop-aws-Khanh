@@ -11,8 +11,8 @@ Dưới đây là một số cảm nhận, đánh giá khách quan cùng các đ
 
 **1. Môi trường làm việc**
 
-* **Cảm nhận:** Không khí làm việc tại chương trình vô cùng cởi mở, chuyên nghiệp và truyền nhiều động lực. Các anh chị cũng như các bạn thực tập sinh luôn sẵn sàng hỗ trợ, gỡ khó lẫn nhau bất kể trong hay ngoài giờ làm việc.
-* **Góp ý nhỏ:** Nếu chương trình có thêm một vài hoạt động giao lưu ngắn (team bonding) giữa các nhóm, các thành viên sẽ có thêm cơ hội gắn kết và hiểu rõ về công việc của nhau hơn.
+* **Cảm nhận:** Không khí làm việc tại chương trình vô cùng cởi mở, chuyên nghiệp và truyền nhiều động lực. Các anh chị cũng như các bạn luôn sẵn sàng hỗ trợ, gỡ khó lẫn nhau bất kể trong hay ngoài giờ làm việc.
+* **Góp ý nhỏ:** Nếu chương trình có thêm một vài hoạt động giao lưu ngắn giữa các nhóm, các thành viên sẽ có thêm cơ hội gắn kết và hiểu rõ về công việc của nhau hơn.
 
 **2. Sự hỗ trợ của mentor / team admin**
 
@@ -21,7 +21,7 @@ Dưới đây là một số cảm nhận, đánh giá khách quan cùng các đ
 
 **3. Sự phù hợp giữa công việc và chuyên ngành học**
 
-* Nội dung các dự án/task được giao bám rất sát với nền tảng Công nghệ thông tin em đang theo học tại trường.
+* Nội dung dự án bám sát với nền tảng Công nghệ thông tin em đang theo học tại trường.
 * Đồng thời, chương trình cũng đưa vào nhiều mảng công nghệ thực tế (AWS Cloud Services, hệ sinh thái AI/ML) giúp em mở rộng góc nhìn và tiếp cận được những xu hướng công nghệ mới nhất.
 
 **4. Cơ hội học hỏi & phát triển kỹ năng**
@@ -32,7 +32,7 @@ Dưới đây là một số cảm nhận, đánh giá khách quan cùng các đ
 **5. Văn hóa & tinh thần đồng đội**
 
 * Môi trường làm việc duy trì được sự cân bằng tốt giữa tính nghiêm túc trong công việc và sự gắn kết thân thiện.
-* Mọi người đều thể hiện sự tôn trọng lẫn nhau. Khi gặp các bài toán khó hoặc deadline gấp, cả team cùng tập trung hỗ trợ mà không có khoảng cách giữa thực tập sinh và nhân viên chính thức.
+* Mọi người đều thể hiện sự tôn trọng, giúp đỡ lẫn nhau khi gặp các vấn đề khó khi thực hiện dự án.
 
 **6. Chính sách / phúc lợi cho thực tập sinh**
 
@@ -41,14 +41,15 @@ Dưới đây là một số cảm nhận, đánh giá khách quan cùng các đ
 ### Một số câu hỏi khác
 
 * **Điều hài lòng nhất trong kỳ thực tập:**
+
   > Sự trưởng thành rõ rệt về tư duy kỹ thuật và khả năng tự giải quyết vấn đề khi đứng trước các bài toán công nghệ thực tế trên AWS.
   >
-
 * **Điểm chương trình có thể tối ưu hơn cho các khóa sau:**
+
   > Bổ sung thêm các buổi Review tổng quan giữa các nhóm để các team có thể học hỏi giải pháp kiến trúc của nhau.
   >
-
 * **Có sẵn sàng giới thiệu chương trình cho bạn bè?**
+
   > **Chắc chắn có.** Đây là môi trường thực tập thực sự chất lượng, giúp sinh viên IT thu hẹp khoảng cách giữa lý thuyết học đường và yêu cầu thực tế của doanh nghiệp.
   >
 

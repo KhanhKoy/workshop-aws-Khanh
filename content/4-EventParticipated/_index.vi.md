@@ -19,7 +19,7 @@ Trong quá trình thực tập, em đã tham gia 3 events, với mỗi event là
 
 ### [Event 2](4.2-Event2/)
 
-&emsp;**Tên sự kiện:** Agent Forge - Deepdive Day 1
+&emsp;**Tên sự kiện:** AWS FCAJ Agent Forge - Deepdive Ngày 1
 
 &emsp;**Thời gian:** 09:00 ngày 01/08/2026
 
@@ -29,7 +29,7 @@ Trong quá trình thực tập, em đã tham gia 3 events, với mỗi event là
 
 ### [Event 3](4.3-Event3/)
 
-&emsp;**Tên sự kiện:** Agent Forge - Deepdive Day 2
+&emsp;**Tên sự kiện:** AWS FCAJ Agent Forge - Deepdive Ngày 2
 
 &emsp;**Thời gian:** 09:00 ngày 08/08/2026
 

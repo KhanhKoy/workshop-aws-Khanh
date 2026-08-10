@@ -5,118 +5,57 @@ weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
-# Bài thu hoạch “Agent Forge - Deepdive Day 1”
+# Bài thu hoạch “AWS FCAJ Agent Forge - Deepdive Ngày 1”
 
 ### Mục Đích Của Sự Kiện
 
-* Định nghĩa rõ ràng về Agentic AI, hệ thống đa tác tử (Multi-Agent System) và cách đánh giá các mức độ tự chủ của mô hình trí tuệ nhân tạo.
-* Khám phá phương pháp xây dựng, mở rộng và chuẩn hóa một hệ thống AI từ bước khái niệm (Proof of Concept) sang môi trường thực tế của doanh nghiệp (Production).
-* Đi sâu vào kiến trúc cốt lõi của nền tảng Amazon Bedrock Agent Core thông qua các thành phần: Runtime Environment, Identity (Định danh) và Gateway.
+* Cung cấp nền tảng tổng quan (Introduction) về hệ sinh thái Agentic AI và các cấp độ tự chủ của trí tuệ nhân tạo.
+* Đi sâu vào phân tích kiến trúc hạ tầng Amazon Bedrock AgentCore cấp độ L300 (cấp độ chuyên sâu), tập trung vào 3 thành phần lõi: Runtime, Gateway và Identity.
+* Trải nghiệm môi trường lập trình thế hệ mới (Vibe Coding) thông qua việc cấu hình và thiết lập dự án AI Agent cơ bản.
 
 ### Danh Sách Diễn Giả
 
-* **Nghĩa** - Chuyên gia từ AWS, phụ trách chính việc phân tích chuyên sâu các kiến thức lý thuyết về Agent Core.
-* **Hải Anh** - Chuyên gia từ AWS (phụ trách phần thực hành chuyên môn tiếp nối của sự kiện).
+* **Nghĩa** - Chuyên gia AWS, phụ trách trình bày các lý thuyết chuyên sâu về kiến trúc AgentCore L300.
+* **Hải Anh** - Chuyên gia AWS, trực tiếp dẫn dắt phần cấu hình môi trường và thực hành (Hands-on Lab).
 
-### Nội Dung Nổi Bật
+### Nội Dung Nổi Bật (Lý Thuyết Cốt Lõi)
 
-#### Hệ Sinh Thái Agentic AIưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng
+#### Kiến Trúc Amazon Bedrock AgentCore L300
 
-* **Bản chất của Agentic AI:** Là những hệ thống phần mềm có mức độ tự chủ cao, được trang bị khả năng tự suy luận (reasoning), lập kế hoạch (planning) và tự động thực thi chuỗi tác vụ phức tạp.
-* **Cấp độ tự chủ:** Thay đổi linh hoạt từ các Trợ lý đơn giản (Simple Assistant), đi qua các luồng quy trình được kiểm soát (Deterministic Workflow), cho đến hệ thống Multi-Agent nơi các Agent có thể tự phân chia công việc và kết nối với nhau.
-* **Giao thức kết nối mới:** Để tối ưu hóa, hệ sinh thái AI hiện đại áp dụng các giao thức tiên tiến như MCP (Model Context Protocol - để Agent giao tiếp với Tool) và A2A (Agent-to-Agent).
+* **Runtime:** Cung cấp môi trường thực thi hoàn toàn phi máy chủ (Serverless), sử dụng công nghệ MicroVM để cách ly an toàn từng phiên giao tiếp của người dùng. Hệ thống tự động mở rộng (auto-scaling) và tính phí linh hoạt dựa trên lưu lượng sử dụng thực tế.
+* **Identity:** Hoạt động như một chốt chặn bảo mật, kiểm soát danh tính và quyền hạn. AgentCore sử dụng cơ chế chuyển đổi token (Workload Access Token - WAT) để mã hóa danh tính người dùng trước khi giao tiếp với các công cụ bên ngoài, đảm bảo không rò rỉ dữ liệu nhạy cảm.
+* **Gateway:** Lớp middleware quản trị trung tâm, giúp chuẩn hóa các kết nối từ hàng trăm Agent đến các API bên ngoài. Gateway tích hợp quy trình Human-in-the-loop, cho phép quản trị viên con người can thiệp phê duyệt hoặc từ chối các quyết định quan trọng của AI.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Nội Dung Thực Hành (Hands-on Lab)
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+Phần thực hành tập trung vào việc thiết lập môi trường Vibe Coding và triển khai Agent thông qua giao tiếp tự nhiên với trợ lý AI Kiro. Nội dung buổi thực hành bao gồm các phần:
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+* **Thiết lập IDE và môi trường:** Cài đặt các công cụ phụ thuộc (Node.js, Python, AWS CDK, AgentCore CLI) và cấu hình thông tin xác thực AWS. Thiết lập tài liệu định hướng (`steering` document) để cấp ngữ cảnh cho trợ lý Kiro.
+* **Khởi tạo Agent cơ bản (Deploy a basic agent):** Sử dụng dòng lệnh `agent core create` để hệ thống tự động sinh mã nguồn. Cấu hình LLM được điều chỉnh sang mô hình `Nova Micro` nhằm tối ưu hóa chi phí phát triển.
+* **Khởi chạy môi trường kiểm thử cục bộ:** Sau khi mã nguồn được tạo, thao tác tiếp theo là điều hướng terminal vào thư mục gốc của dự án (ví dụ cụ thể tại `C:\Users\khanh\AgentCoreProject> cd AgentCoreProject`) và khởi chạy môi trường phát triển cục bộ bằng lệnh `agentcore dev`.
 
-#### Domain-Driven Design (DDD)
+### Những Gì Học Được & Ứng Dụng
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### Thay Đổi Tư Duy Phát Triển Phần Mềm
 
-#### Event-Driven Architecture
+* **Sức mạnh của Vibe Coding:** Dù chỉ mới đi được những bước thiết lập đầu tiên, việc quan sát AI IDE tự động đọc ngữ cảnh và sinh mã nguồn Agent chứng minh sự dịch chuyển rõ nét từ việc "code tay" sang "mô tả giải pháp".
+* **Tối ưu hóa chi phí đám mây:** Kỹ năng tùy chỉnh tệp cấu hình LLM để chuyển sang các mô hình nhỏ gọn, chi phí thấp trong giai đoạn kiểm thử cục bộ là một phản xạ thực tiễn rất quan trọng để tránh phát sinh chi phí ngoài ý muốn khi làm việc trên tài khoản cá nhân.
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+#### Thực Tế Triển Khai Hạ Tầng Đám Mây (IaC)
 
-#### Compute Evolution
+- Việc phải chờ đợi mòn mỏi khi chạy lệnh `agentcore dev` là một minh chứng thực tế cho thấy quá trình tự động hóa triển khai hạ tầng đám mây không bao giờ diễn ra tức thì. Trải nghiệm này mang lại bài học xương máu về việc phải dự trù kỹ lưỡng thời gian triển khai (deployment time) khi thiết kế và vận hành các hệ thống RAG hoặc Chatbot Trợ lý Pháp luật phức tạp sau này, tránh gây gián đoạn dịch vụ cho người dùng cuối.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+### Ứng Dụng Vào Công Việc & Học Tập
 
-#### Amazon Q Developer
+* **Nâng cấp bảo mật cho kiến trúc RAG:** Khái niệm về Identity và cơ chế Workload Access Token (WAT) từ AgentCore cung cấp một khuôn mẫu xuất sắc để ứng dụng vào việc bảo mật hệ thống Chatbot Trợ lý Pháp luật. Bằng cách thiết lập một lớp Gateway tương tự, các luồng truy xuất văn bản luật từ cơ sở dữ liệu RDS PostgreSQL (pgvector) hay các lệnh gọi đến Amazon Bedrock sẽ được kiểm soát định danh chặt chẽ, đảm bảo tính riêng tư và phân quyền truy cập an toàn.
+* **Tối ưu hóa quy trình phát triển với Vibe Coding:** Việc tận dụng các IDE tích hợp AI (như Kiro) thay đổi hoàn toàn cách tiếp cận khi xây dựng các API bằng FastAPI hay cấu hình LangChain. Thay vì mất thời gian viết các đoạn mã boilerplate cơ bản, có thể dùng ngôn ngữ tự nhiên để AI tự động sinh mã, từ đó dành toàn bộ thời gian để giải quyết các bài toán hóc búa hơn về luồng xử lý bất đồng bộ (chẳng hạn như việc tối ưu hóa hiệu năng bằng `asyncio.to_thread`) hoặc tinh chỉnh chiến lược nén tri thức.
+* **Quản lý hạ tầng đám mây (IaC) hiệu quả hơn:** Trải nghiệm chờ đợi cấu hình từ lệnh `agentcore dev` là bài học thiết thực về quản lý tài nguyên. Khi xây dựng luồng Ingestion lưu trữ tài liệu lên S3, SQS hay DynamoDB, việc ứng dụng tự động hóa hạ tầng (CloudFormation/CDK) cần được quy hoạch bài bản. Cần tách biệt rõ ràng môi trường phát triển (dev) và môi trường vận hành (production) để tránh việc thời gian cấp phát tài nguyên đám mây làm gián đoạn quá trình kiểm thử phần mềm.
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+### Trải nghiệm và đúc kết từ sự kiện
 
-### Những Gì Học Được
-
-#### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+* **Thực tế phũ phàng của việc triển khai Cloud:** Điểm nhấn đáng nhớ nhất của buổi học không hẳn nằm ở những lý thuyết trơn tru, mà lại chính là khoảnh khắc cả khán phòng cùng "ngồi nhìn màn hình" chờ hệ thống chạy lệnh `agentcore dev`. Trải nghiệm này phản ánh một sự thật rất đặc trưng của nghề kỹ sư phần mềm: tự động hóa hạ tầng đám mây rất mạnh mẽ, nhưng việc cấp phát tài nguyên (provisioning) thực tế tốn khá nhiều thời gian và luôn cần sự kiên nhẫn.
+* **Sự chuyển dịch từ "Thợ gõ code" sang "Kiến trúc sư giải pháp":** Việc chứng kiến AI đọc hiểu tài liệu định hướng (`steering` document) và tự động thiết lập toàn bộ khung sườn dự án mang lại một góc nhìn mới mẻ. Lập trình viên hiện đại đang dần bước ra khỏi việc cặm cụi gõ từng dòng cú pháp, tiến tới vai trò của một người đạo diễn – nơi kỹ năng mô tả bài toán, thiết kế hệ thống và định hướng luồng nghiệp vụ trở nên quan trọng hơn bao giờ hết.
+* **Bước đệm nền tảng là thử thách lớn nhất:** Việc toàn bộ thời gian thực hành bị dồn vào khâu chuẩn bị môi trường (cài đặt CLI, CDK, cấu hình Access Key) cho thấy rào cản lớn nhất khi tiếp cận các công nghệ Cloud mới thường không nằm ở code, mà nằm ở việc thiết lập hệ sinh thái. Đúc kết này giúp tôi chuẩn bị tâm lý và kỹ năng khắc phục sự cố (troubleshooting) tốt hơn cho các dự án phức tạp sắp tới tại giảng đường đại học cũng như các sân chơi công nghệ lớn.
 
 #### Một số hình ảnh khi tham gia sự kiện
 

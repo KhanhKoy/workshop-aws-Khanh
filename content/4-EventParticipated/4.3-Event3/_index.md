@@ -1,4 +1,3 @@
-
 ---
 title: "Event 3"
 date: 2024-01-01
@@ -6,127 +5,65 @@ weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: “AWS FCAJ Agent Forge - Deepdive Day 2”
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+* **Continuing the learning path from Day 1** , diving deep into three advanced components of the Agentic AI system on Amazon Bedrock Agent Core: Memory, Observability, and Evaluation.
+* **Analyzing auxiliary features (extensions)** that enhance the power of AI Agents, such as Policy, Browser, Code Interpreter, Payment, Registry, and the Optimization process.
+* **Combining practical application (Hands-on Lab)** to directly deploy an AI Agent integrated with Tools and configure Agent Core Memory.
 
 ### Speakers
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+* **Nghia** - AWS Expert, continuing to lead the in-depth theoretical foundation and system architecture.
+* **Hai Anh** - AWS Expert, providing detailed guidance on operations using the Kiro tool and Command Line Interface (CLI).
 
-### Key Highlights
+### Key Highlights (Core Theory)
 
-#### Identifying the drawbacks of legacy application architecture
+#### Memory System
 
-- Long product release cycles → Lost revenue/missed opportunities
-- Inefficient operations → Reduced productivity, higher costs
-- Non-compliance with security regulations → Security breaches, loss of reputation
+* **Core Problem:** Context Window limits (e.g., Claude models have a limit of 256k to 1 million tokens) prevent Agents from remembering the entire context if the conversation thread is too long. Memory is the mandatory solution for AI to automatically personalize the user experience.
+* **Memory Classification:**
+  * *Short-term Memory:* Stores raw data of conversation messages.
+  * *Long-term Memory:* Runs asynchronous background processes to extract key insights from Short-term memory and stores them as vectors. Storage strategies include: Summary, User Preference, Semantic, and Episodic^.
+* **Namespace Mechanism:** Designed in a hierarchical format to isolate memory data by Strategy > Actor (user) > Session, thereby accelerating extraction using Semantic Search algorithms and saving tokens.
 
-#### Transitioning to modern application architecture – Microservices
+#### Observability
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+* Provides "eyes" for developers through three pillars: Logs, Traces, and Metrics (using the OpenTelemetry standard).
+* Helps track latency, token costs (cost visibility), and traffic to assess the root cause of issues (e.g., overly long user queries, tool errors, or overloaded GPU infrastructure).
 
-- **Queue Management**: Handle asynchronous tasks
-- **Caching Strategy**: Optimize performance
-- **Message Handling**: Flexible inter-service communication
+#### Evaluation System
 
-#### Domain-Driven Design (DDD)
+* Helps detect blind spots such as AI Hallucination and Fault reasoning that lead to incorrect Tool calls.
+* Provides 13 built-in evaluators to score Correctness at 3 levels: Session (Overall objective), Trace/Choice (Accuracy of individual answers), and Span (Optimal level of tool usage). Can operate flexibly in On-demand mode (for Dev environments) and Online mode (for Production environments).
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts
-- **Bookstore case study**: Demonstrates real-world DDD application
-- **Context mapping**: 7 patterns for integrating bounded contexts
+#### Extended Features
 
-#### Event-Driven Architecture
+* **Policy:** Uses the Cedar language to set highly granular permissions, granting access based on the principle of least privilege to block invalid Agent actions in Production environments.
+* **Browser & Code Interpreter:** Virtual environments (sandboxes) provided by AWS enabling Agents to simulate web browsing or write and execute code safely.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming
-- **Benefits**: Loose coupling, scalability, resilience
-- **Sync vs async comparison**: Understanding the trade-offs
+### Hands-on Lab
 
-#### Compute Evolution
+* Install an AI-integrated IDE (like Kiro) combined with configuring the `steering` document (a design standard orientation document specifying the use of the AWS US-West/East Region and the Claude Sonet model).
+* Initialize the project using the CLI command `agent core create` from the Starter Toolkit, structuring the skeleton including Python configuration files and the API system.
+* Configure a low-cost model (`Nova Micro`) in the `LLM.py` file to optimize costs during development practice.
+* Declare Strands Agent Tools in the System Prompt to program tools for the AI to look up virtual order statuses (Refund and Return Assistant).
+* Create storage functionality via CLI using the command integrating the Memory Module, aiming for the Agent to remember the user's context.
+* Launch the testing environment Agent Runtime Endpoint (Local Web Server) via the `agent core dev` command to communicate directly with the LLM API.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria for appropriate choice
+### Key Takeaways & Applications
 
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams
-- **Bounded contexts**: Identifying and managing complexity in large systems
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes
-- Use **event-driven communication** instead of synchronous calls
-- **Integration patterns**: When to use sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap
-- **7Rs framework**: Multiple modernization paths depending on the application
-- **ROI measurement**: Cost reduction + business agility
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams
-- **Refactor microservices**: Use bounded contexts to define service boundaries
-- **Implement event-driven patterns**: Replace some sync calls with async messaging
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.
-
-#### Hands-on technical exposure
-
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.
-
-#### Leveraging modern tools
-
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.
-
-#### Networking and discussions
-
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.
-
-#### Lessons learned
-
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.
+* **RAG Data Management Strategy:** The lesson on Namespace structure and Semantic Search in partitioning long-term data (Long-term Memory) is a perfect solution to apply immediately to the Legal Assistant Chatbot project. Instead of letting the Agent search through a massive Vector Database, hierarchically structuring legal documents (e.g., by domain -> department -> circular) will significantly save tokens and reduce latency.
+* **Secure Authorization (Policy):** Using access control languages (like Cedar) brings a mindset of strict security mechanisms (Guardrails). When integrated with the AWS architecture, this prevents situations where AI arbitrarily modifies data inside the RDS PostgreSQL database or leaks sensitive internal policies.
+* **Standardizing Model Evaluation (Evaluation):** Instead of merely evaluating the Chatbot by asking a few intuitive questions, I realized the necessity of building a standardized evaluation set grounded in Ground Truth, such as Session, Trace, and Span levels. This mindset clearly directs how to set up automated testing scenarios (A/B testing) and use the Observability system to continuously optimize the development lifecycle of an AI Agent (Red Teaming, Optimization).
 
 #### Some event photos
 
-*Add your event photos here*
+![1786335187091](image/_index/1786335187091.jpg)
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+![1786335194723](image/_index/1786335194723.jpg)
+
+![1786335203844](image/_index/1786335203844.jpg)
+
+![1786335210350](image/_index/1786335210350.jpg)
