@@ -13,6 +13,6 @@ This blog introduces Task-Aware Knowledge Compression (TAKC), a solution that ov
 
 This blog introduces Amazon Bedrock AgentCore Optimization, a solution designed to detect and resolve "silent failures" in enterprise AI Agent systems—errors that bypass traditional infrastructure monitoring while causing business logic failures. By automatically clustering trace data by root cause and ranking them by impact scale, it shifts observability from reactive to proactive. Consequently, enterprises can rapidly isolate incidents, enhance AI Agent reliability, and optimize engineering team productivity.
 
-### [Blog 3 - ...](3.3-Blog3/)
+### [Blog 3 - DETECTING AND PREVENTING DOCUMENT FRAUD IN SECONDS WITH INSCRIBE AND AMAZON BEDROCK](3.3-Blog3/)
 
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+This blog highlights Inscribe's integration of Amazon Bedrock to detect financial document fraud in seconds, overcoming the limitations of traditional OCR tools against Generative AI and logical discrepancies. By combining file metadata analysis with deep LLM contextual reasoning on AWS infrastructure, the system automatically verifies data integrity and provides instant risk insights. Consequently, financial institutions can cut manual review time by 80%, improve detection accuracy, and optimize operational costs.
