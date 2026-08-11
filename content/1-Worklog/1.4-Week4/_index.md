@@ -7,43 +7,24 @@ pre: " <b> 1.3. </b> "
 ---
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Improve the chatbot interface and prepare cloud deployment orientation.
+* Learn Docker, EC2, ALB, VPC, and necessary networking components for AWS architecture.
 
 ### Tasks to be carried out this week:
 
-| Day | Task                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                                                                |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | --------------------------------------------------------------------------------- |
-| 2   | - Get acquainted with FCAJ members - Read and take note of internship unit rules and regulations                                                                                       | 13/07/2026 | 13/07/2026      |                                                                                   |
-| 3   | - Learn about AWS and its types of services&emsp; + Compute &emsp; + Storage &emsp; + Networking &emsp; + Database &emsp; + ...                                                        | 14/07/2026 | 14/07/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4   | - Create AWS Free Tier account - Learn about AWS Console & AWS CLI  -**Practice:** &emsp; + Create AWS account &emsp; + Install & configure AWS CLI  &emsp; + How to use AWS CLI | 15/07/2026 | 15/07/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5   | - Learn basic EC2:&emsp; + Instance types &emsp; + AMI &emsp; + EBS &emsp; + ...  - SSH connection methods to EC2  - Learn about Elastic IP                                            | 16/07/2026 | 16/07/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6   | -**Practice:** &emsp; + Launch an EC2 instance &emsp; + Connect via SSH &emsp; + Attach an EBS volume                                                                            | 17/07/2026 | 17/07/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Day | Task                                                                                                                                                                                                               | Start Date | Completion Date | Reference Material                                                                |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | --------------------------------------------------------------------------------- |
+| 2   | - Create and edit Chainlit interface for the chatbot.<br />- Test user flow for asking questions and receiving answers.<br />- Fix initial interface errors.                                                       | 13/07/2026 | 13/07/2026      |                                                                                   |
+| 3   | - Learn Python/FastAPI/Chainlit application deployment using Docker.<br />- Learn Amazon EC2 and container running model on EC2.<br />- Prepare application packaging direction.                                   | 14/07/2026 | 14/07/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4   | - Learn Application Load Balancer to route requests to the application.<br />- Learn VPC, public subnets, private subnets, and security groups.<br />- Update AWS architecture plan for the project.               | 15/07/2026 | 15/07/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5   | - Learn VPC Endpoints for Bedrock, DynamoDB, and S3.<br />- Add documentation describing the main flows of the system.<br />- Continue editing retrieval and vector store code.                                    | 16/07/2026 | 16/07/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6   | - Review team progress and agree on cloud architecture for the Law-Chatbot project.<br />- Continue updating workshop section, summarizing deployment steps and project architecture.<br />- Write Week 4 worklog. | 17/07/2026 | 17/07/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Successfully created and configured an AWS Free Tier account.
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-* Installed and configured AWS CLI on the computer, including:
-
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Chatbot interface customized and re-tested.
+* Grasped application deployment model using Docker on EC2.
+* AWS architecture documentation of the system further completed.
+* Identified main networking components needed for cloud deployment.
+* Held team meeting to agree on cloud deployment architecture for the Law-Chatbot project.
+* Worked with team to review AWS architecture diagram and adjust S3, Lambda, RDS, Bedrock, and EC2 flow.

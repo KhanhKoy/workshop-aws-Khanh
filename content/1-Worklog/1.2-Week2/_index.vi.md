@@ -7,8 +7,8 @@ pre: " <b> 1.2. </b> "
 ---
 ### Mục tiêu tuần 2:
 
-* Hoàn thiện pipeline xử lý dữ liệu pháp luật và tối ưu quá trình build index
-* Tìm hiểu RDS PostgreSQL pgvector, Bedrock Titan Embedding và viết proposal cho dự ánHiểu dịch vụ AWS cơ bản, cách dùng console & CL
+* Hoàn thiện pipeline xử lý dữ liệu pháp luật và tối ưu quá trình build index.
+* Tìm hiểu RDS PostgreSQL pgvector, Bedrock Titan Embedding và viết proposal cho dự án.
 
 ### Các công việc cần triển khai trong tuần này:
 
@@ -23,6 +23,7 @@ pre: " <b> 1.2. </b> "
 ### Kết quả đạt được tuần 2:
 
 * Pipeline build index được hoàn thiện hơn và có khả năng xử lý dữ liệu theo batch.
+
 - Cải thiện khả năng kiểm soát bộ nhớ khi xử lý dữ liệu lớn.
 - Hoàn thiện proposal trình bày ý tưởng và định hướng của dự án.
 - Nắm được vai trò của RDS pgvector và Bedrock Titan Embedding trong kiến trúc cloud.

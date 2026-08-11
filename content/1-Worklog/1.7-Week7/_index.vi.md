@@ -27,3 +27,6 @@ pre: " <b> 1.7. </b> "
 - Bổ sung xác thực Cognito và phân quyền theo nhóm người dùng
 - Có CloudFormation template cho các tài nguyên nền Cognito, DynamoDB, S3, SQS và DLQ
 - Hoàn thành bài blog 2, báo cáo event và worklog tuần 7.
+- Phối hợp với thành viên nhóm khi tích hợp Streamlit UI, FastAPI backend và core RAG.
+- Review API, luồng xác thực Cognito và chức năng admin cùng nhóm.
+- Cùng nhóm kiểm tra CloudFormation template và luồng ingestion S3/SQS/Lambda.

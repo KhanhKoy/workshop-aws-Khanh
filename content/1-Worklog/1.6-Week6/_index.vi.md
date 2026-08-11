@@ -26,3 +26,5 @@ pre: " <b> 1.6. </b> "
 - Hoàn thiện thiết kế lưu lịch sử hội thoại bằng DynamoDB.
 - Có định hướng monitoring/alerting bằng CloudWatch và SNS.
 - Hoàn thành bài blog 1, báo cáo event và worklog tuần 6.
+- Phối hợp với nhóm kiểm thử chatbot end-to-end và ghi nhận các lỗi phát sinh.
+- Trao đổi kết quả test, latency và chất lượng câu trả lời để thống nhất các điểm cần tối ưu.

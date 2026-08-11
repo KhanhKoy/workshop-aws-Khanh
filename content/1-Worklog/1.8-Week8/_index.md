@@ -5,49 +5,28 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Complete EC2/Docker deployment configuration and review security before final summary.
+* Complete remaining parts of personal report and internship report.
 
 ### Tasks to be carried out this week:
 
-| Day | Task                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                                                                |
-| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | --------------------------------------------------------------------------------- |
-| 2   | - Get acquainted with FCAJ members - Read and take note of internship unit rules and regulations                                                                                       | 10/08/2026 | 10/08/2026      |                                                                                   |
-| 3   | - Learn about AWS and its types of services&emsp; + Compute &emsp; + Storage &emsp; + Networking &emsp; + Database &emsp; + ...                                                        | 11/08/2026 | 11/08/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 4   | - Create AWS Free Tier account - Learn about AWS Console & AWS CLI  -**Practice:** &emsp; + Create AWS account &emsp; + Install & configure AWS CLI  &emsp; + How to use AWS CLI | 12/08/2026 | 12/08/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 5   | - Learn basic EC2:&emsp; + Instance types &emsp; + AMI &emsp; + EBS &emsp; + ...  - SSH connection methods to EC2  - Learn about Elastic IP                                            | 13/08/2026 | 13/08/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
-| 6   | -**Practice:** &emsp; + Launch an EC2 instance &emsp; + Connect via SSH &emsp; + Attach an EBS volume                                                                            | 14/08/2026 | 14/08/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| Day | Task                                                                                                                                                                                                                                                                                                                                            | Start Date | Completion Date | Reference Material                                                                |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | --------------------------------------------------------------------------------- |
+| 2   | - Complete Docker deployment configuration for EC2 environment.<br />- Update deploy/Dockerfile, docker-compose.yml, entrypoint.sh, and requirements-deploy.txt.<br />- Test launching FastAPI and Streamlit using Docker Compose.                                                                                                              | 10/08/2026 | 10/08/2026      |                                                                                   |
+| 3   | - Write deploy/README.md deployment guide for Amazon EC2.<br />- Design deployment model for FastAPI, Streamlit, RDS pgvector, and Bedrock.<br />Configure application to use RDS instead of SQLite when running in cloud.                                                                                                                      | 11/08/2026 | 11/08/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 4   | - Write migration for app domain on PostgreSQL/RDS.<br />- Learn IAM Instance Role for EC2 to access Bedrock and S3 more securely than access keys.<br />- Review security of .env configuration and AUTH_DISABLED.                                                                                                                             | 12/08/2026 | 12/08/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 5   | - Prepare direction for moving secrets to AWS Secrets Manager.<br />- Re-test chatbot, APIs, admin interface, and session deletion function.<br />- Review remaining errors in code, database, and deployment.                                                                                                                                  | 13/08/2026 | 13/08/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
+| 6   | - Complete internship report and related documents.<br />- Write event report.<br />- Complete workshop section summarizing work done in project.<br />- Write self-assessment.<br />- Write feedback on internship program.<br />- Write Week 8 worklog.<br />- Team meeting to summarize progress, finalize demo, workshop, and final report. | 14/08/2026 | 14/08/2026      | [https://cloudjourney.awsstudygroup.com/](https://cloudjourney.awsstudygroup.com/) |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups:
-
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-* Successfully created and configured an AWS Free Tier account.
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-* Installed and configured AWS CLI on the computer, including:
-
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed documentation and Docker/EC2 deployment configuration for project.
+* Application reviewed for RDS configuration, security, and cloud operations.
+* Completed workshop report, self-assessment, feedback, and Week 8 worklog
+* Completed blog post 3.
+* Held team meeting to summarize progress, review missing parts of project and report.
+* Coordinated to complete demo, deployment documentation, and workshop content.
+* Reviewed final report, gave feedback, and edited content among team members.
+* Fully synthesized content serving final internship report.

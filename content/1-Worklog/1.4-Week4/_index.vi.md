@@ -26,3 +26,5 @@ pre: " <b> 1.3. </b> "
 - Nắm được mô hình triển khai ứng dụng bằng Docker trên EC2.
 - Hoàn thiện hơn tài liệu mô tả kiến trúc AWS của hệ thống.
 - Xác định được các thành phần mạng chính cần dùng khi triển khai cloud.
+- Họp nhóm để thống nhất kiến trúc triển khai cloud cho dự án Law-Chatbot.
+- Cùng nhóm review sơ đồ kiến trúc AWS và điều chỉnh các luồng S3, Lambda, RDS, Bedrock, EC2.
