@@ -14,7 +14,7 @@ chapter: false
 
 &emsp; **Email:** khanhp2004@gmail.com
 
-&emsp; **University:** Sai Gon University
+&emsp; **University:** Saigon University
 
 &emsp; **Major:** Information Technology
 
@@ -26,7 +26,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 22/06/2026 to 15/08/2026
 
-![Your profile picture](/images/avatar.png)
+![1786424209769](image/_index/1786424209769.jpg)
 
 ### Report Content
 
