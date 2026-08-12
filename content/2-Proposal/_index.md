@@ -44,7 +44,7 @@ User authentication via **Amazon Cognito** (users/editors/admins groups). Conver
 
 ### 3. Solution Architecture
 
-![Vietnamese Legal RAG Chatbot Architecture](images/2-Proposal/legal_chatbot_architecture.png)
+![1786493841999](image/_index/1786493841999.png)
 
 **AWS Services Used**
 

@@ -5,7 +5,6 @@ weight: 2
 chapter: false
 pre: " <b> 5.2. </b> "
 ---
-
 # Prerequisites
 
 Before setting up AWS services in the following sections, complete the preparation steps below.
@@ -44,17 +43,17 @@ Do not commit a `.env` file containing RDS passwords, API keys, or Access Keys t
 - Enable MFA for IAM user / root
 - Confirm access to required services:
 
-| Service | Required access |
-| --- | --- |
-| EC2 | Launch, describe instances |
-| S3 | Create bucket, put/get objects |
-| SQS | Create queue, send/receive messages |
-| Lambda | Create function, invoke |
-| Bedrock | InvokeModel (enable model access) |
-| RDS | Create DB instance |
-| DynamoDB | Create table, read/write |
-| Cognito | Create user pool |
-| CloudFormation | Create/update stack |
+| Service        | Required access                     |
+| -------------- | ----------------------------------- |
+| EC2            | Launch, describe instances          |
+| S3             | Create bucket, put/get objects      |
+| SQS            | Create queue, send/receive messages |
+| Lambda         | Create function, invoke             |
+| Bedrock        | InvokeModel (enable model access)   |
+| RDS            | Create DB instance                  |
+| DynamoDB       | Create table, read/write            |
+| Cognito        | Create user pool                    |
+| CloudFormation | Create/update stack                 |
 
 ## 5.2.4. IAM User / IAM Role
 
@@ -99,20 +98,8 @@ git --version
 
 ## Minimum security groups
 
-| Direction | Port | Notes |
-| --- | --- | --- |
+| Direction   | Port           | Notes                                         |
+| ----------- | -------------- | --------------------------------------------- |
 | Inbound EC2 | **8501** | Streamlit UI — open only from your IP or ALB |
-| Inbound EC2 | **8000** | FastAPI — usually Docker-internal only |
-| Inbound RDS | **5432** | Allow only from the EC2 security group |
-
-## Checklist before section 5.3
-
-- [ ] Can sign in to AWS Console / CLI
-- [ ] EC2 is ready; SSH or Session Manager works
-- [ ] Docker and Git work on EC2
-- [ ] Repo is cloned with a `.env` file
-- [ ] RDS pgvector is ready; `vector` extension enabled
-- [ ] Security groups and IAM role are configured
-- [ ] Bedrock or Gemini is chosen for LLM
-
-Next: create an **S3 bucket** and upload data.
+| Inbound EC2 | **8000** | FastAPI — usually Docker-internal only       |
+| Inbound RDS | **5432** | Allow only from the EC2 security group        |

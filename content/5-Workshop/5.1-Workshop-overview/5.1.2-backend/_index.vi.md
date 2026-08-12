@@ -7,8 +7,6 @@ pre: " <b> 5.1.2 </b> "
 ---
 # Backend
 
-Giới thiệu....
-
 ## Endpoints
 
 | Endpoint                                      | Method | Auth | Desc                                               |
