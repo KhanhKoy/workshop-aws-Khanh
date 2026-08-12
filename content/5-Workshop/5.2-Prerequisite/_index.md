@@ -93,4 +93,4 @@ After data is loaded, the pipeline will:
 3. Generate embeddings in batches
 4. Write into the vector store for query serving
 
-![1786495670556](image/_index.vi/1786495670556.png)
+![1786499972700](image/_index/1786499972700.png)
